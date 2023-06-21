@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"hc_sr04\startup_stm32f103xb.o"
+"hc_sr04\dwt_delay.o"
+"hc_sr04\lcd16x2.o"
+"hc_sr04\main.o"
+"hc_sr04\stm32f1xx_it.o"
+"hc_sr04\stm32f1xx_hal_msp.o"
+"hc_sr04\stm32f1xx_hal_gpio_ex.o"
+"hc_sr04\stm32f1xx_hal_tim.o"
+"hc_sr04\stm32f1xx_hal_tim_ex.o"
+"hc_sr04\stm32f1xx_hal.o"
+"hc_sr04\stm32f1xx_hal_rcc.o"
+"hc_sr04\stm32f1xx_hal_rcc_ex.o"
+"hc_sr04\stm32f1xx_hal_gpio.o"
+"hc_sr04\stm32f1xx_hal_dma.o"
+"hc_sr04\stm32f1xx_hal_cortex.o"
+"hc_sr04\stm32f1xx_hal_pwr.o"
+"hc_sr04\stm32f1xx_hal_flash.o"
+"hc_sr04\stm32f1xx_hal_flash_ex.o"
+"hc_sr04\stm32f1xx_hal_exti.o"
+"hc_sr04\system_stm32f1xx.o"
+--strict --scatter "HC_SR04\HC_SR04.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "HC_SR04.map" -o HC_SR04\HC_SR04.axf
