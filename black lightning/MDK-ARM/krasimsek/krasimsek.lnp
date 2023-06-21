@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"krasimsek\startup_stm32f103xb.o"
+"krasimsek\main.o"
+"krasimsek\stm32f1xx_it.o"
+"krasimsek\stm32f1xx_hal_msp.o"
+"krasimsek\stm32f1xx_hal_gpio_ex.o"
+"krasimsek\stm32f1xx_hal_tim.o"
+"krasimsek\stm32f1xx_hal_tim_ex.o"
+"krasimsek\stm32f1xx_hal.o"
+"krasimsek\stm32f1xx_hal_rcc.o"
+"krasimsek\stm32f1xx_hal_rcc_ex.o"
+"krasimsek\stm32f1xx_hal_gpio.o"
+"krasimsek\stm32f1xx_hal_dma.o"
+"krasimsek\stm32f1xx_hal_cortex.o"
+"krasimsek\stm32f1xx_hal_pwr.o"
+"krasimsek\stm32f1xx_hal_flash.o"
+"krasimsek\stm32f1xx_hal_flash_ex.o"
+"krasimsek\stm32f1xx_hal_exti.o"
+"krasimsek\system_stm32f1xx.o"
+--strict --scatter "krasimsek\krasimsek.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "krasimsek.map" -o krasimsek\krasimsek.axf
