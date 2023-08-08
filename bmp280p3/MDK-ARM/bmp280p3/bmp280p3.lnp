@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"bmp280p3\startup_stm32f103xb.o"
+"bmp280p3\bmp280.o"
+"bmp280p3\main.o"
+"bmp280p3\stm32f1xx_it.o"
+"bmp280p3\stm32f1xx_hal_msp.o"
+"bmp280p3\stm32f1xx_hal_gpio_ex.o"
+"bmp280p3\stm32f1xx_hal_i2c.o"
+"bmp280p3\stm32f1xx_hal.o"
+"bmp280p3\stm32f1xx_hal_rcc.o"
+"bmp280p3\stm32f1xx_hal_rcc_ex.o"
+"bmp280p3\stm32f1xx_hal_gpio.o"
+"bmp280p3\stm32f1xx_hal_dma.o"
+"bmp280p3\stm32f1xx_hal_cortex.o"
+"bmp280p3\stm32f1xx_hal_pwr.o"
+"bmp280p3\stm32f1xx_hal_flash.o"
+"bmp280p3\stm32f1xx_hal_flash_ex.o"
+"bmp280p3\stm32f1xx_hal_exti.o"
+"bmp280p3\stm32f1xx_hal_tim.o"
+"bmp280p3\stm32f1xx_hal_tim_ex.o"
+"bmp280p3\stm32f1xx_hal_uart.o"
+"bmp280p3\system_stm32f1xx.o"
+--strict --scatter "bmp280p3\bmp280p3.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "bmp280p3.map" -o bmp280p3\bmp280p3.axf
