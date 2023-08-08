@@ -1,0 +1,10 @@
+../Core/Src/Robot.c:19:6:DrawHeart	7
+../Core/Src/Robot.c:44:6:Mini_eyes	3
+../Core/Src/Robot.c:63:6:Robot_eyes	3
+../Core/Src/Robot.c:82:6:Half_Circle	14
+../Core/Src/Robot.c:181:6:Robot_eyes1	6
+../Core/Src/Robot.c:200:6:Arrow_eyes	3
+../Core/Src/Robot.c:228:6:Arrow_lip	3
+../Core/Src/Robot.c:257:6:Shocked_lip	2
+../Core/Src/Robot.c:271:6:Angry_eyes	8
+../Core/Src/Robot.c:321:6:writeLineBold	7

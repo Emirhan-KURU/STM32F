@@ -1,0 +1,14 @@
+../Core/Src/Face.c:13:6:Happy_1	16	static
+../Core/Src/Face.c:19:6:Cute_1	16	static
+../Core/Src/Face.c:26:6:Happy_2	16	static
+../Core/Src/Face.c:32:6:NotBad	24	static
+../Core/Src/Face.c:38:6:Happy_3	16	static
+../Core/Src/Face.c:45:6:Shocked	16	static
+../Core/Src/Face.c:50:6:Angry_1	16	static
+../Core/Src/Face.c:56:6:UnHappy_1	16	static
+../Core/Src/Face.c:61:6:Sleepy	24	static
+../Core/Src/Face.c:68:6:Happy_4	16	static
+../Core/Src/Face.c:77:6:UnHappy_2	16	static
+../Core/Src/Face.c:94:6:Dead	24	static
+../Core/Src/Face.c:104:6:Happy_5	24	static
+../Core/Src/Face.c:115:6:Face_14	16	static
