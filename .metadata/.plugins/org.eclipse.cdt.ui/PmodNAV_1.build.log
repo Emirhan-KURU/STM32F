@@ -1,0 +1,12 @@
+13:22:54 **** Incremental Build of configuration Debug for project PmodNAV_1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/lsm9ds1_acc_gyr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/lsm9ds1_acc_gyr.d" -MT"Core/Src/lsm9ds1_acc_gyr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/lsm9ds1_acc_gyr.o"
+../Core/Src/lsm9ds1_acc_gyr.c:1:10: fatal error: linux/module.h: No such file or directory
+    1 | #include <linux/module.h>
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:37: Core/Src/lsm9ds1_acc_gyr.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+13:22:55 Build Failed. 2 errors, 0 warnings. (took 676ms)
+

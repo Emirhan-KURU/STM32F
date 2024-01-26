@@ -1,0 +1,21 @@
+22:39:14 **** Incremental Build of configuration Debug for project SHT3x_STM32 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SHT3x_STM32.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emirhan/STM32CubeIDE/workspace_1.13.1/SHT3x_STM32/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SHT3x_STM32.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SHT3x_STM32.elf
+ 
+arm-none-eabi-size   SHT3x_STM32.elf 
+arm-none-eabi-objdump -h -S  SHT3x_STM32.elf  > "SHT3x_STM32.list"
+   text	   data	    bss	    dec	    hex	filename
+  41340	    152	   3920	  45412	   b164	SHT3x_STM32.elf
+Finished building: default.size.stdout
+ 
+Finished building: SHT3x_STM32.list
+ 
+22:39:18 **** Incremental Build of configuration Debug for project SHT3x_STM32 ****
+make -j8 all 
+arm-none-eabi-size   SHT3x_STM32.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41340	    152	   3920	  45412	   b164	SHT3x_STM32.elf
+Finished building: default.size.stdout
+ 

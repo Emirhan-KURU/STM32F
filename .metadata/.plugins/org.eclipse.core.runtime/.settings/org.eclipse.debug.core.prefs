@@ -1,0 +1,8 @@
+//org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.debug.gdbjtag.launchConfigurationType=org.eclipse.cdt.debug.gdbjtag.core.dsfLaunchDelegate,debug,;
+//org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.applicationLaunchType=org.eclipse.cdt.dsf.gdb.launch.localCLaunch,debug,;org.eclipse.cdt.cdi.launch.localCLaunch,run,;
+//org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.attachLaunchType=org.eclipse.cdt.dsf.gdb.launch.attachCLaunch,debug,;
+//org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.postmortemLaunchType=org.eclipse.cdt.dsf.gdb.launch.coreCLaunch,debug,;
+//org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.remoteApplicationLaunchType=org.eclipse.rse.remotecdt.dsf.debug,debug,;
+eclipse.preferences.version=1
+org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n    <expression enabled\="true" text\="WtrP"/>\n    <expression enabled\="true" text\="Rd_P"/>\n    <expression enabled\="true" text\="Shift"/>\n    <expression enabled\="true" text\="CrossFade"/>\n    <expression enabled\="true" text\="a0"/>\n    <expression enabled\="true" text\="a1"/>\n    <expression enabled\="true" text\="a2"/>\n    <expression enabled\="true" text\="b1"/>\n    <expression enabled\="true" text\="b2"/>\n    <expression enabled\="true" text\="hp_in_z1"/>\n    <expression enabled\="true" text\="hp_in_z2"/>\n    <expression enabled\="true" text\="hp_out_z1"/>\n    <expression enabled\="true" text\="hp_out_z2"/>\n</watchExpressions>\n

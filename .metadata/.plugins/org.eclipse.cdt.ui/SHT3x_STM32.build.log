@@ -1,0 +1,10 @@
+22:39:18 **** Incremental Build of configuration Debug for project SHT3x_STM32 ****
+make -j8 all 
+arm-none-eabi-size   SHT3x_STM32.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41340	    152	   3920	  45412	   b164	SHT3x_STM32.elf
+Finished building: default.size.stdout
+ 
+
+22:39:18 Build Finished. 0 errors, 0 warnings. (took 786ms)
+

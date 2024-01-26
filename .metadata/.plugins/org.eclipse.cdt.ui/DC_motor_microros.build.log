@@ -1,0 +1,29 @@
+21:25:51 **** Incremental Build of configuration Debug for project DC_motor_microros ****
+make -j8 all 
+docker pull microros/micro_ros_static_library_builder:humble && docker run --rm -v /home/emirhan/STM32CubeIDE/workspace_1.13.1/DC_motor_microros:/project --env MICROROS_LIBRARY_FOLDER=micro_ros_stm32cubemx_utils/microros_static_library_ide microros/micro_ros_static_library_builder:humble
+humble: Pulling from microros/micro_ros_static_library_builder
+Digest: sha256:3c13fee7e7d6814ebc87c7ccd4c5d7592310b8adc86c5ff2a1f4de179776a0fb
+Status: Image is up to date for microros/micro_ros_static_library_builder:humble
+docker.io/microros/micro_ros_static_library_builder:humble
+dos2unix: converting file /project/micro_ros_stm32cubemx_utils/microros_static_library_ide/library_generation/library_generation.sh to Unix format...
+micro-ROS library found. Skipping...
+Delete micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros/ for rebuild.
+ 
+arm-none-eabi-gcc "../Core/Src/microros_transports/dma_transport.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/microros_transports/dma_transport.d" -MT"Core/Src/microros_transports/dma_transport.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/microros_transports/dma_transport.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/microros_transports/dma_transport.c:1:10: fatal error: uxr/client/transport.h: No such file or directory
+    1 | #include <uxr/client/transport.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [Core/Src/microros_transports/subdir.mk:19: Core/Src/microros_transports/dma_transport.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+../Core/Src/main.c:26:10: fatal error: rcl/rcl.h: No such file or directory
+   26 | #include <rcl/rcl.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+make: *** [makefile:67: all] Error 2
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+21:25:55 Build Failed. 6 errors, 0 warnings. (took 3s.533ms)
+

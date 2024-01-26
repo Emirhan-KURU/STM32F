@@ -1,0 +1,3 @@
+buildConsole/keepLog=true
+buildConsole/logLocation=/home/emirhan/STM32CubeIDE/workspace_1.13.1/.metadata/.plugins/org.eclipse.cdt.ui/Microros_blackpill_1.build.log
+eclipse.preferences.version=1

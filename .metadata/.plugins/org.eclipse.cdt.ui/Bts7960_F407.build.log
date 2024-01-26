@@ -1,0 +1,10 @@
+11:54:24 **** Build of configuration Debug for project Bts7960_F407 ****
+make -j8 all 
+arm-none-eabi-size   Bts7960_F407.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34832	    132	   4148	  39112	   98c8	Bts7960_F407.elf
+Finished building: default.size.stdout
+ 
+
+11:54:25 Build Finished. 0 errors, 0 warnings. (took 733ms)
+

@@ -1,0 +1,839 @@
+11:49:27 **** Incremental Build of configuration Debug for project PmodNav_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/PmodNAV.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/PmodNAV.d" -MT"Core/Src/PmodNAV.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/PmodNAV.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/PmodNAV.c:42:
+../Core/Inc/PmodNAV.h:334:4: error: unknown type name 'u8'
+  334 |    u8 ag;
+      |    ^~
+../Core/Inc/PmodNAV.h:335:4: error: unknown type name 'u8'
+  335 |    u8 mag;
+      |    ^~
+../Core/Inc/PmodNAV.h:336:4: error: unknown type name 'u8'
+  336 |    u8 alt;
+      |    ^~
+../Core/Inc/PmodNAV.h:340:4: error: unknown type name 'u32'
+  340 |    u32 GPIO_addr;
+      |    ^~~
+../Core/Inc/PmodNAV.h:341:4: error: unknown type name 'XSpi'
+  341 |    XSpi NAVSpi;
+      |    ^~~~
+../Core/Inc/PmodNAV.h:343:4: error: unknown type name 'u8'
+  343 |    u8 prtSel;
+      |    ^~
+../Core/Inc/PmodNAV.h:344:4: error: unknown type name 'u8'
+  344 |    u8 m_SSPin;
+      |    ^~
+../Core/Inc/PmodNAV.h:362:24: error: unknown type name 'uint8_t'
+  362 | float NAV_GetGRangeLSB(uint8_t bRangeG);
+      |                        ^~~~~~~
+../Core/Inc/PmodNAV.h:1:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | /******************************************************************************/
+../Core/Inc/PmodNAV.h:365:38: error: unknown type name 'u32'
+  365 | void NAV_begin(PmodNAV* InstancePtr, u32 GPIO_Address, u32 SPI_Address);
+      |                                      ^~~
+../Core/Inc/PmodNAV.h:365:56: error: unknown type name 'u32'
+  365 | void NAV_begin(PmodNAV* InstancePtr, u32 GPIO_Address, u32 SPI_Address);
+      |                                                        ^~~
+../Core/Inc/PmodNAV.h:366:17: error: unknown type name 'XSpi'
+  366 | int NAV_SPIInit(XSpi *InstancePtr);
+      |                 ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:370:40: note: in expansion of macro 'bool'
+  370 | void NAV_InitALT(PmodNAV* InstancePtr, bool fInit);
+      |                                        ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:371:39: note: in expansion of macro 'bool'
+  371 | void NAV_InitAG(PmodNAV* InstancePtr, bool fInit, u8 bModeSel);
+      |                                       ^~~~
+../Core/Inc/PmodNAV.h:371:51: error: unknown type name 'u8'
+  371 | void NAV_InitAG(PmodNAV* InstancePtr, bool fInit, u8 bModeSel);
+      |                                                   ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:372:40: note: in expansion of macro 'bool'
+  372 | void NAV_InitMAG(PmodNAV* InstancePtr, bool fInit);
+      |                                        ^~~~
+../Core/Inc/PmodNAV.h:378:41: error: unknown type name 'u8'
+  378 | void NAV_WriteSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bVal);
+      |                                         ^~
+../Core/Inc/PmodNAV.h:378:51: error: unknown type name 'u8'
+  378 | void NAV_WriteSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bVal);
+      |                                                   ^~
+../Core/Inc/PmodNAV.h:378:61: error: unknown type name 'u8'
+  378 | void NAV_WriteSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bVal);
+      |                                                             ^~
+../Core/Inc/PmodNAV.h:379:1: error: unknown type name 'u8'
+  379 | u8 NAV_ReadSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr);
+      | ^~
+../Core/Inc/PmodNAV.h:379:38: error: unknown type name 'u8'
+  379 | u8 NAV_ReadSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr);
+      |                                      ^~
+../Core/Inc/PmodNAV.h:379:48: error: unknown type name 'u8'
+  379 | u8 NAV_ReadSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr);
+      |                                                ^~
+../Core/Inc/PmodNAV.h:381:46: error: unknown type name 'u8'
+  381 | void NAV_WriteRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                              ^~
+../Core/Inc/PmodNAV.h:381:56: error: unknown type name 'u8'
+  381 | void NAV_WriteRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                                        ^~
+../Core/Inc/PmodNAV.h:381:66: error: unknown type name 'u8'
+  381 | void NAV_WriteRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                                                  ^~
+../Core/Inc/PmodNAV.h:382:7: error: unknown type name 'u8'
+  382 |       u8 *pData);
+      |       ^~
+../Core/Inc/PmodNAV.h:383:45: error: unknown type name 'u8'
+  383 | void NAV_ReadRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                             ^~
+../Core/Inc/PmodNAV.h:383:55: error: unknown type name 'u8'
+  383 | void NAV_ReadRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                                       ^~
+../Core/Inc/PmodNAV.h:383:65: error: unknown type name 'u8'
+  383 | void NAV_ReadRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                                                 ^~
+../Core/Inc/PmodNAV.h:384:7: error: unknown type name 'u8'
+  384 |       u8 *pData);
+      |       ^~
+../Core/Inc/PmodNAV.h:386:50: error: unknown type name 'u8'
+  386 | void NAV_SetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      |                                                  ^~
+../Core/Inc/PmodNAV.h:386:60: error: unknown type name 'u8'
+  386 | void NAV_SetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      |                                                            ^~
+../Core/Inc/PmodNAV.h:387:7: error: unknown type name 'u8'
+  387 |       u8 bMask, u8 bValue, u8 startBit);
+      |       ^~
+../Core/Inc/PmodNAV.h:387:17: error: unknown type name 'u8'
+  387 |       u8 bMask, u8 bValue, u8 startBit);
+      |                 ^~
+../Core/Inc/PmodNAV.h:387:28: error: unknown type name 'u8'
+  387 |       u8 bMask, u8 bValue, u8 startBit);
+      |                            ^~
+../Core/Inc/PmodNAV.h:388:1: error: unknown type name 'u8'
+  388 | u8 NAV_GetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      | ^~
+../Core/Inc/PmodNAV.h:388:48: error: unknown type name 'u8'
+  388 | u8 NAV_GetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      |                                                ^~
+../Core/Inc/PmodNAV.h:388:58: error: unknown type name 'u8'
+  388 | u8 NAV_GetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      |                                                          ^~
+../Core/Inc/PmodNAV.h:389:7: error: unknown type name 'u8'
+  389 |       u8 startBit, u8 noBits);
+      |       ^~
+../Core/Inc/PmodNAV.h:389:20: error: unknown type name 'u8'
+  389 |       u8 startBit, u8 noBits);
+      |                    ^~
+../Core/Inc/PmodNAV.h:390:48: error: unknown type name 'u8'
+  390 | void NAV_SetRegisterBits(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr, u8 bMask,
+      |                                                ^~
+../Core/Inc/PmodNAV.h:390:58: error: unknown type name 'u8'
+  390 | void NAV_SetRegisterBits(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr, u8 bMask,
+      |                                                          ^~
+../Core/Inc/PmodNAV.h:390:71: error: unknown type name 'u8'
+  390 | void NAV_SetRegisterBits(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr, u8 bMask,
+      |                                                                       ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:391:7: note: in expansion of macro 'bool'
+  391 |       bool fValue);
+      |       ^~~~
+../Core/Inc/PmodNAV.h:394:42: error: unknown type name 's16'
+  394 | void NAV_ReadAccel(PmodNAV* InstancePtr, s16* X, s16* Y, s16*Z);
+      |                                          ^~~
+../Core/Inc/PmodNAV.h:394:50: error: unknown type name 's16'
+  394 | void NAV_ReadAccel(PmodNAV* InstancePtr, s16* X, s16* Y, s16*Z);
+      |                                                  ^~~
+../Core/Inc/PmodNAV.h:394:58: error: unknown type name 's16'
+  394 | void NAV_ReadAccel(PmodNAV* InstancePtr, s16* X, s16* Y, s16*Z);
+      |                                                          ^~~
+../Core/Inc/PmodNAV.h:396:56: error: unknown type name 's16'
+  396 | float NAV_ConvertReadingToValueG(PmodNAV* InstancePtr, s16 rawVal);
+      |                                                        ^~~
+../Core/Inc/PmodNAV.h:397:43: error: unknown type name 'u8'
+  397 | void NAV_SetRangeXL(PmodNAV* InstancePtr, u8 bRangeXL);
+      |                                           ^~
+../Core/Inc/PmodNAV.h:398:25: error: unknown type name 'u8'
+  398 | float NAV_GetXLRangeLSB(u8 bRangeXL);
+      |                         ^~
+../Core/Inc/PmodNAV.h:399:1: error: unknown type name 'u8'
+  399 | u8 NAV_GetRangeXL(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:400:1: error: unknown type name 'u8'
+  400 | u8 NAV_DataAvailableXL(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:401:44: error: unknown type name 'u8'
+  401 | void NAV_ConfigIntXL(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                            ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:401:56: note: in expansion of macro 'bool'
+  401 | void NAV_ConfigIntXL(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                                        ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:401:66: note: in expansion of macro 'bool'
+  401 | void NAV_ConfigIntXL(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                                                  ^~~~
+../Core/Inc/PmodNAV.h:402:1: error: unknown type name 'u8'
+  402 | u8 NAV_GetIntSrcXLG(PmodNAV* InstancePtr, u8 bInstMode);
+      | ^~
+../Core/Inc/PmodNAV.h:402:43: error: unknown type name 'u8'
+  402 | u8 NAV_GetIntSrcXLG(PmodNAV* InstancePtr, u8 bInstMode);
+      |                                           ^~
+../Core/Inc/PmodNAV.h:404:21: error: unknown type name 'u8'
+  404 |       float thValZ, u8 intDuration, bool wait);
+      |                     ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:404:37: note: in expansion of macro 'bool'
+  404 |       float thValZ, u8 intDuration, bool wait);
+      |                                     ^~~~
+../Core/Inc/PmodNAV.h:407:41: error: unknown type name 's16'
+  407 | void NAV_ReadGyro(PmodNAV* InstancePtr, s16* GX, s16* GY, s16* GZ);
+      |                                         ^~~
+../Core/Inc/PmodNAV.h:407:50: error: unknown type name 's16'
+  407 | void NAV_ReadGyro(PmodNAV* InstancePtr, s16* GX, s16* GY, s16* GZ);
+      |                                                  ^~~
+../Core/Inc/PmodNAV.h:407:59: error: unknown type name 's16'
+  407 | void NAV_ReadGyro(PmodNAV* InstancePtr, s16* GX, s16* GY, s16* GZ);
+      |                                                           ^~~
+../Core/Inc/PmodNAV.h:409:58: error: unknown type name 's16'
+  409 | float NAV_ConvertReadingToValueDPS(PmodNAV* InstancePtr, s16 rawVal);
+      |                                                          ^~~
+../Core/Inc/PmodNAV.h:410:42: error: unknown type name 'u8'
+  410 | void NAV_SetRangeG(PmodNAV* InstancePtr, u8 bRangeG);
+      |                                          ^~
+../Core/Inc/PmodNAV.h:412:1: error: unknown type name 'u8'
+  412 | u8 NAV_DataAvailableG(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:413:43: error: unknown type name 'u8'
+  413 | void NAV_ConfigIntG(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                           ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:413:55: note: in expansion of macro 'bool'
+  413 | void NAV_ConfigIntG(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                                       ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:413:65: note: in expansion of macro 'bool'
+  413 | void NAV_ConfigIntG(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                                                 ^~~~
+../Core/Inc/PmodNAV.h:414:62: error: unknown type name 'u16'
+  414 | void NAV_SetIntThresholdG(PmodNAV* InstancePtr, float thVal, u16 axis,
+      |                                                              ^~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:415:7: note: in expansion of macro 'bool'
+  415 |       bool drCntMode, u8 intDuration, bool wait);
+      |       ^~~~
+../Core/Inc/PmodNAV.h:415:23: error: unknown type name 'u8'
+  415 |       bool drCntMode, u8 intDuration, bool wait);
+      |                       ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:415:39: note: in expansion of macro 'bool'
+  415 |       bool drCntMode, u8 intDuration, bool wait);
+      |                                       ^~~~
+../Core/Inc/PmodNAV.h:417:42: error: unknown type name 'u8'
+  417 | void NAV_ConfigInt(PmodNAV* InstancePtr, u8 bIntPin, u8 bIntGenMask,
+      |                                          ^~
+../Core/Inc/PmodNAV.h:417:54: error: unknown type name 'u8'
+  417 | void NAV_ConfigInt(PmodNAV* InstancePtr, u8 bIntPin, u8 bIntGenMask,
+      |                                                      ^~
+../Core/Inc/PmodNAV.h:418:7: error: unknown type name 'u8'
+  418 |       u8 bActiveType, u8 bOutputType);
+      |       ^~
+../Core/Inc/PmodNAV.h:418:23: error: unknown type name 'u8'
+  418 |       u8 bActiveType, u8 bOutputType);
+      |                       ^~
+../Core/Inc/PmodNAV.h:424:40: error: unknown type name 's16'
+  424 | void NAV_ReadMag(PmodNAV* InstancePtr, s16 *MagX, s16 *MagY, s16 *MagZ);
+      |                                        ^~~
+../Core/Inc/PmodNAV.h:424:51: error: unknown type name 's16'
+  424 | void NAV_ReadMag(PmodNAV* InstancePtr, s16 *MagX, s16 *MagY, s16 *MagZ);
+      |                                                   ^~~
+../Core/Inc/PmodNAV.h:424:62: error: unknown type name 's16'
+  424 | void NAV_ReadMag(PmodNAV* InstancePtr, s16 *MagX, s16 *MagY, s16 *MagZ);
+      |                                                              ^~~
+../Core/Inc/PmodNAV.h:426:60: error: unknown type name 's16'
+  426 | float NAV_ConvertReadingToValueGauss(PmodNAV* InstancePtr, s16 rawVal);
+      |                                                            ^~~
+../Core/Inc/PmodNAV.h:427:44: error: unknown type name 'u8'
+  427 | void NAV_SetRangeMAG(PmodNAV* InstancePtr, u8 bRangeMAG);
+      |                                            ^~
+../Core/Inc/PmodNAV.h:428:26: error: unknown type name 'u8'
+  428 | float NAV_GetMAGRangeLSB(u8 bRangeMAG);
+      |                          ^~
+../Core/Inc/PmodNAV.h:429:1: error: unknown type name 'u8'
+  429 | u8 NAV_GetRangeMAG(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:430:1: error: unknown type name 'u8'
+  430 | u8 NAV_DataAvailableMAG(PmodNAV* InstancePtr, u8 axis);
+      | ^~
+../Core/Inc/PmodNAV.h:430:47: error: unknown type name 'u8'
+  430 | u8 NAV_DataAvailableMAG(PmodNAV* InstancePtr, u8 axis);
+      |                                               ^~
+../Core/Inc/PmodNAV.h:431:45: error: unknown type name 'u8'
+  431 | void NAV_ConfigIntMAG(PmodNAV* InstancePtr, u8 bIntGen, u8 bActiveType,
+      |                                             ^~
+../Core/Inc/PmodNAV.h:431:57: error: unknown type name 'u8'
+  431 | void NAV_ConfigIntMAG(PmodNAV* InstancePtr, u8 bIntGen, u8 bActiveType,
+      |                                                         ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:432:7: note: in expansion of macro 'bool'
+  432 |       bool latch);
+      |       ^~~~
+../Core/Inc/PmodNAV.h:434:1: error: unknown type name 'u8'
+  434 | u8 NAV_GetIntSrcMAG(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:440:1: error: unknown type name 'u8'
+  440 | u8 NAV_TempAvailableALT(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:441:1: error: unknown type name 'u8'
+  441 | u8 NAV_DataAvailableALT(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:442:45: error: unknown type name 'u8'
+  442 | void NAV_ConfigIntALT(PmodNAV* InstancePtr, u8 bIntGen, u8 bActiveType,
+      |                                             ^~
+../Core/Inc/PmodNAV.h:442:57: error: unknown type name 'u8'
+  442 | void NAV_ConfigIntALT(PmodNAV* InstancePtr, u8 bIntGen, u8 bActiveType,
+      |                                                         ^~
+../Core/Inc/PmodNAV.h:443:7: error: unknown type name 'u8'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |       ^~
+../Core/Inc/PmodNAV.h:443:23: error: unknown type name 'u8'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |                       ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:443:41: note: in expansion of macro 'bool'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |                                         ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:443:57: note: in expansion of macro 'bool'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |                                                         ^~~~
+../Core/Inc/PmodNAV.h:443:69: error: unknown type name 'u8'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |                                                                     ^~
+../Core/Inc/PmodNAV.h:445:1: error: unknown type name 'u8'
+  445 | u8 NAV_GetIntSrcALT(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:448:39: error: unknown type name 'u8'
+  448 | void NAV_SetODR(PmodNAV* InstancePtr, u8 bInstMode, u8 odrVal);
+      |                                       ^~
+../Core/Inc/PmodNAV.h:448:53: error: unknown type name 'u8'
+  448 | void NAV_SetODR(PmodNAV* InstancePtr, u8 bInstMode, u8 odrVal);
+      |                                                     ^~
+../Core/Inc/PmodNAV.h:449:1: error: unknown type name 'u8'
+  449 | u8 NAV_GetODRRaw(PmodNAV* InstancePtr, u8 bInstMode);
+      | ^~
+../Core/Inc/PmodNAV.h:449:40: error: unknown type name 'u8'
+  449 | u8 NAV_GetODRRaw(PmodNAV* InstancePtr, u8 bInstMode);
+      |                                        ^~
+../Core/Inc/PmodNAV.h:450:40: error: unknown type name 'u8'
+  450 | float NAV_GetODR(PmodNAV* InstancePtr, u8 bInstMode);
+      |                                        ^~
+../Core/Inc/PmodNAV.h:454:43: error: unknown type name 'u8'
+  454 | void NAV_FIFOEnable(PmodNAV* InstancePtr, u8 bInst, bool fEnable);
+      |                                           ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:454:53: note: in expansion of macro 'bool'
+  454 | void NAV_FIFOEnable(PmodNAV* InstancePtr, u8 bInst, bool fEnable);
+      |                                                     ^~~~
+../Core/Inc/PmodNAV.h:455:40: error: unknown type name 'u8'
+  455 | void NAV_SetFIFO(PmodNAV* InstancePtr, u8 bInst, u8 parFIFOMode,
+      |                                        ^~
+../Core/Inc/PmodNAV.h:455:50: error: unknown type name 'u8'
+  455 | void NAV_SetFIFO(PmodNAV* InstancePtr, u8 bInst, u8 parFIFOMode,
+      |                                                  ^~
+../Core/Inc/PmodNAV.h:456:7: error: unknown type name 'u8'
+  456 |       u8 FIFOThreshold);
+      |       ^~
+../Core/Inc/PmodNAV.h:457:1: error: unknown type name 'u8'
+  457 | u8 NAV_GetFIFOMode(PmodNAV* InstancePtr, u8 bInst);
+      | ^~
+../Core/Inc/PmodNAV.h:457:42: error: unknown type name 'u8'
+  457 | u8 NAV_GetFIFOMode(PmodNAV* InstancePtr, u8 bInst);
+      |                                          ^~
+../Core/Inc/PmodNAV.h:458:1: error: unknown type name 'u8'
+  458 | u8 NAV_GetFIFOThs(PmodNAV* InstancePtr, u8 bInst);
+      | ^~
+../Core/Inc/PmodNAV.h:458:41: error: unknown type name 'u8'
+  458 | u8 NAV_GetFIFOThs(PmodNAV* InstancePtr, u8 bInst);
+      |                                         ^~
+../Core/Inc/PmodNAV.h:459:1: error: unknown type name 'u8'
+  459 | u8 NAV_GetFIFOStatus(PmodNAV* InstancePtr, u8 bInst);
+      | ^~
+../Core/Inc/PmodNAV.h:459:44: error: unknown type name 'u8'
+  459 | u8 NAV_GetFIFOStatus(PmodNAV* InstancePtr, u8 bInst);
+      |                                            ^~
+../Core/Src/PmodNAV.c:43:10: fatal error: sleep.h: No such file or directory
+   43 | #include "sleep.h"
+      |          ^~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:37: Core/Src/PmodNAV.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/PmodNAV.h:334:4: error: unknown type name 'u8'
+  334 |    u8 ag;
+      |    ^~
+../Core/Inc/PmodNAV.h:335:4: error: unknown type name 'u8'
+  335 |    u8 mag;
+      |    ^~
+../Core/Inc/PmodNAV.h:336:4: error: unknown type name 'u8'
+  336 |    u8 alt;
+      |    ^~
+../Core/Inc/PmodNAV.h:340:4: error: unknown type name 'u32'
+  340 |    u32 GPIO_addr;
+      |    ^~~
+../Core/Inc/PmodNAV.h:341:4: error: unknown type name 'XSpi'
+  341 |    XSpi NAVSpi;
+      |    ^~~~
+../Core/Inc/PmodNAV.h:343:4: error: unknown type name 'u8'
+  343 |    u8 prtSel;
+      |    ^~
+../Core/Inc/PmodNAV.h:344:4: error: unknown type name 'u8'
+  344 |    u8 m_SSPin;
+      |    ^~
+../Core/Inc/PmodNAV.h:365:38: error: unknown type name 'u32'
+  365 | void NAV_begin(PmodNAV* InstancePtr, u32 GPIO_Address, u32 SPI_Address);
+      |                                      ^~~
+../Core/Inc/PmodNAV.h:365:56: error: unknown type name 'u32'
+  365 | void NAV_begin(PmodNAV* InstancePtr, u32 GPIO_Address, u32 SPI_Address);
+      |                                                        ^~~
+../Core/Inc/PmodNAV.h:366:17: error: unknown type name 'XSpi'
+  366 | int NAV_SPIInit(XSpi *InstancePtr);
+      |                 ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:370:40: note: in expansion of macro 'bool'
+  370 | void NAV_InitALT(PmodNAV* InstancePtr, bool fInit);
+      |                                        ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:371:39: note: in expansion of macro 'bool'
+  371 | void NAV_InitAG(PmodNAV* InstancePtr, bool fInit, u8 bModeSel);
+      |                                       ^~~~
+../Core/Inc/PmodNAV.h:371:51: error: unknown type name 'u8'
+  371 | void NAV_InitAG(PmodNAV* InstancePtr, bool fInit, u8 bModeSel);
+      |                                                   ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:372:40: note: in expansion of macro 'bool'
+  372 | void NAV_InitMAG(PmodNAV* InstancePtr, bool fInit);
+      |                                        ^~~~
+../Core/Inc/PmodNAV.h:378:41: error: unknown type name 'u8'
+  378 | void NAV_WriteSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bVal);
+      |                                         ^~
+../Core/Inc/PmodNAV.h:378:51: error: unknown type name 'u8'
+  378 | void NAV_WriteSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bVal);
+      |                                                   ^~
+../Core/Inc/PmodNAV.h:378:61: error: unknown type name 'u8'
+  378 | void NAV_WriteSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bVal);
+      |                                                             ^~
+../Core/Inc/PmodNAV.h:379:1: error: unknown type name 'u8'
+  379 | u8 NAV_ReadSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr);
+      | ^~
+../Core/Inc/PmodNAV.h:379:38: error: unknown type name 'u8'
+  379 | u8 NAV_ReadSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr);
+      |                                      ^~
+../Core/Inc/PmodNAV.h:379:48: error: unknown type name 'u8'
+  379 | u8 NAV_ReadSPI(PmodNAV* InstancePtr, u8 bInst, u8 bAddr);
+      |                                                ^~
+../Core/Inc/PmodNAV.h:381:46: error: unknown type name 'u8'
+  381 | void NAV_WriteRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                              ^~
+../Core/Inc/PmodNAV.h:381:56: error: unknown type name 'u8'
+  381 | void NAV_WriteRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                                        ^~
+../Core/Inc/PmodNAV.h:381:66: error: unknown type name 'u8'
+  381 | void NAV_WriteRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                                                  ^~
+../Core/Inc/PmodNAV.h:382:7: error: unknown type name 'u8'
+  382 |       u8 *pData);
+      |       ^~
+../Core/Inc/PmodNAV.h:383:45: error: unknown type name 'u8'
+  383 | void NAV_ReadRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                             ^~
+../Core/Inc/PmodNAV.h:383:55: error: unknown type name 'u8'
+  383 | void NAV_ReadRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                                       ^~
+../Core/Inc/PmodNAV.h:383:65: error: unknown type name 'u8'
+  383 | void NAV_ReadRegister(PmodNAV* InstancePtr, u8 bInst, u8 bAddr, u8 bCntBytes,
+      |                                                                 ^~
+../Core/Inc/PmodNAV.h:384:7: error: unknown type name 'u8'
+  384 |       u8 *pData);
+      |       ^~
+../Core/Inc/PmodNAV.h:386:50: error: unknown type name 'u8'
+  386 | void NAV_SetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      |                                                  ^~
+../Core/Inc/PmodNAV.h:386:60: error: unknown type name 'u8'
+  386 | void NAV_SetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      |                                                            ^~
+../Core/Inc/PmodNAV.h:387:7: error: unknown type name 'u8'
+  387 |       u8 bMask, u8 bValue, u8 startBit);
+      |       ^~
+../Core/Inc/PmodNAV.h:387:17: error: unknown type name 'u8'
+  387 |       u8 bMask, u8 bValue, u8 startBit);
+      |                 ^~
+../Core/Inc/PmodNAV.h:387:28: error: unknown type name 'u8'
+  387 |       u8 bMask, u8 bValue, u8 startBit);
+      |                            ^~
+../Core/Inc/PmodNAV.h:388:1: error: unknown type name 'u8'
+  388 | u8 NAV_GetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      | ^~
+../Core/Inc/PmodNAV.h:388:48: error: unknown type name 'u8'
+  388 | u8 NAV_GetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      |                                                ^~
+../Core/Inc/PmodNAV.h:388:58: error: unknown type name 'u8'
+  388 | u8 NAV_GetBitsInRegister(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr,
+      |                                                          ^~
+../Core/Inc/PmodNAV.h:389:7: error: unknown type name 'u8'
+  389 |       u8 startBit, u8 noBits);
+      |       ^~
+../Core/Inc/PmodNAV.h:389:20: error: unknown type name 'u8'
+  389 |       u8 startBit, u8 noBits);
+      |                    ^~
+../Core/Inc/PmodNAV.h:390:48: error: unknown type name 'u8'
+  390 | void NAV_SetRegisterBits(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr, u8 bMask,
+      |                                                ^~
+../Core/Inc/PmodNAV.h:390:58: error: unknown type name 'u8'
+  390 | void NAV_SetRegisterBits(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr, u8 bMask,
+      |                                                          ^~
+../Core/Inc/PmodNAV.h:390:71: error: unknown type name 'u8'
+  390 | void NAV_SetRegisterBits(PmodNAV* InstancePtr, u8 bInst, u8 bRegAddr, u8 bMask,
+      |                                                                       ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:391:7: note: in expansion of macro 'bool'
+  391 |       bool fValue);
+      |       ^~~~
+../Core/Inc/PmodNAV.h:394:42: error: unknown type name 's16'
+  394 | void NAV_ReadAccel(PmodNAV* InstancePtr, s16* X, s16* Y, s16*Z);
+      |                                          ^~~
+../Core/Inc/PmodNAV.h:394:50: error: unknown type name 's16'
+  394 | void NAV_ReadAccel(PmodNAV* InstancePtr, s16* X, s16* Y, s16*Z);
+      |                                                  ^~~
+../Core/Inc/PmodNAV.h:394:58: error: unknown type name 's16'
+  394 | void NAV_ReadAccel(PmodNAV* InstancePtr, s16* X, s16* Y, s16*Z);
+      |                                                          ^~~
+../Core/Inc/PmodNAV.h:396:56: error: unknown type name 's16'
+  396 | float NAV_ConvertReadingToValueG(PmodNAV* InstancePtr, s16 rawVal);
+      |                                                        ^~~
+../Core/Inc/PmodNAV.h:397:43: error: unknown type name 'u8'
+  397 | void NAV_SetRangeXL(PmodNAV* InstancePtr, u8 bRangeXL);
+      |                                           ^~
+../Core/Inc/PmodNAV.h:398:25: error: unknown type name 'u8'
+  398 | float NAV_GetXLRangeLSB(u8 bRangeXL);
+      |                         ^~
+../Core/Inc/PmodNAV.h:399:1: error: unknown type name 'u8'
+  399 | u8 NAV_GetRangeXL(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:400:1: error: unknown type name 'u8'
+  400 | u8 NAV_DataAvailableXL(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:401:44: error: unknown type name 'u8'
+  401 | void NAV_ConfigIntXL(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                            ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:401:56: note: in expansion of macro 'bool'
+  401 | void NAV_ConfigIntXL(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                                        ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:401:66: note: in expansion of macro 'bool'
+  401 | void NAV_ConfigIntXL(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                                                  ^~~~
+../Core/Inc/PmodNAV.h:402:1: error: unknown type name 'u8'
+  402 | u8 NAV_GetIntSrcXLG(PmodNAV* InstancePtr, u8 bInstMode);
+      | ^~
+../Core/Inc/PmodNAV.h:402:43: error: unknown type name 'u8'
+  402 | u8 NAV_GetIntSrcXLG(PmodNAV* InstancePtr, u8 bInstMode);
+      |                                           ^~
+../Core/Inc/PmodNAV.h:404:21: error: unknown type name 'u8'
+  404 |       float thValZ, u8 intDuration, bool wait);
+      |                     ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:404:37: note: in expansion of macro 'bool'
+  404 |       float thValZ, u8 intDuration, bool wait);
+      |                                     ^~~~
+../Core/Inc/PmodNAV.h:407:41: error: unknown type name 's16'
+  407 | void NAV_ReadGyro(PmodNAV* InstancePtr, s16* GX, s16* GY, s16* GZ);
+      |                                         ^~~
+../Core/Inc/PmodNAV.h:407:50: error: unknown type name 's16'
+  407 | void NAV_ReadGyro(PmodNAV* InstancePtr, s16* GX, s16* GY, s16* GZ);
+      |                                                  ^~~
+../Core/Inc/PmodNAV.h:407:59: error: unknown type name 's16'
+  407 | void NAV_ReadGyro(PmodNAV* InstancePtr, s16* GX, s16* GY, s16* GZ);
+      |                                                           ^~~
+../Core/Inc/PmodNAV.h:409:58: error: unknown type name 's16'
+  409 | float NAV_ConvertReadingToValueDPS(PmodNAV* InstancePtr, s16 rawVal);
+      |                                                          ^~~
+../Core/Inc/PmodNAV.h:410:42: error: unknown type name 'u8'
+  410 | void NAV_SetRangeG(PmodNAV* InstancePtr, u8 bRangeG);
+      |                                          ^~
+../Core/Inc/PmodNAV.h:412:1: error: unknown type name 'u8'
+  412 | u8 NAV_DataAvailableG(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:413:43: error: unknown type name 'u8'
+  413 | void NAV_ConfigIntG(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                           ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:413:55: note: in expansion of macro 'bool'
+  413 | void NAV_ConfigIntG(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                                       ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:413:65: note: in expansion of macro 'bool'
+  413 | void NAV_ConfigIntG(PmodNAV* InstancePtr, u8 bIntGen, bool aoi, bool latch);
+      |                                                                 ^~~~
+../Core/Inc/PmodNAV.h:414:62: error: unknown type name 'u16'
+  414 | void NAV_SetIntThresholdG(PmodNAV* InstancePtr, float thVal, u16 axis,
+      |                                                              ^~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:415:7: note: in expansion of macro 'bool'
+  415 |       bool drCntMode, u8 intDuration, bool wait);
+      |       ^~~~
+../Core/Inc/PmodNAV.h:415:23: error: unknown type name 'u8'
+  415 |       bool drCntMode, u8 intDuration, bool wait);
+      |                       ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:415:39: note: in expansion of macro 'bool'
+  415 |       bool drCntMode, u8 intDuration, bool wait);
+      |                                       ^~~~
+../Core/Inc/PmodNAV.h:417:42: error: unknown type name 'u8'
+  417 | void NAV_ConfigInt(PmodNAV* InstancePtr, u8 bIntPin, u8 bIntGenMask,
+      |                                          ^~
+../Core/Inc/PmodNAV.h:417:54: error: unknown type name 'u8'
+  417 | void NAV_ConfigInt(PmodNAV* InstancePtr, u8 bIntPin, u8 bIntGenMask,
+      |                                                      ^~
+../Core/Inc/PmodNAV.h:418:7: error: unknown type name 'u8'
+  418 |       u8 bActiveType, u8 bOutputType);
+      |       ^~
+../Core/Inc/PmodNAV.h:418:23: error: unknown type name 'u8'
+  418 |       u8 bActiveType, u8 bOutputType);
+      |                       ^~
+../Core/Inc/PmodNAV.h:424:40: error: unknown type name 's16'
+  424 | void NAV_ReadMag(PmodNAV* InstancePtr, s16 *MagX, s16 *MagY, s16 *MagZ);
+      |                                        ^~~
+../Core/Inc/PmodNAV.h:424:51: error: unknown type name 's16'
+  424 | void NAV_ReadMag(PmodNAV* InstancePtr, s16 *MagX, s16 *MagY, s16 *MagZ);
+      |                                                   ^~~
+../Core/Inc/PmodNAV.h:424:62: error: unknown type name 's16'
+  424 | void NAV_ReadMag(PmodNAV* InstancePtr, s16 *MagX, s16 *MagY, s16 *MagZ);
+      |                                                              ^~~
+../Core/Inc/PmodNAV.h:426:60: error: unknown type name 's16'
+  426 | float NAV_ConvertReadingToValueGauss(PmodNAV* InstancePtr, s16 rawVal);
+      |                                                            ^~~
+../Core/Inc/PmodNAV.h:427:44: error: unknown type name 'u8'
+  427 | void NAV_SetRangeMAG(PmodNAV* InstancePtr, u8 bRangeMAG);
+      |                                            ^~
+../Core/Inc/PmodNAV.h:428:26: error: unknown type name 'u8'
+  428 | float NAV_GetMAGRangeLSB(u8 bRangeMAG);
+      |                          ^~
+../Core/Inc/PmodNAV.h:429:1: error: unknown type name 'u8'
+  429 | u8 NAV_GetRangeMAG(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:430:1: error: unknown type name 'u8'
+  430 | u8 NAV_DataAvailableMAG(PmodNAV* InstancePtr, u8 axis);
+      | ^~
+../Core/Inc/PmodNAV.h:430:47: error: unknown type name 'u8'
+  430 | u8 NAV_DataAvailableMAG(PmodNAV* InstancePtr, u8 axis);
+      |                                               ^~
+../Core/Inc/PmodNAV.h:431:45: error: unknown type name 'u8'
+  431 | void NAV_ConfigIntMAG(PmodNAV* InstancePtr, u8 bIntGen, u8 bActiveType,
+      |                                             ^~
+../Core/Inc/PmodNAV.h:431:57: error: unknown type name 'u8'
+  431 | void NAV_ConfigIntMAG(PmodNAV* InstancePtr, u8 bIntGen, u8 bActiveType,
+      |                                                         ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:432:7: note: in expansion of macro 'bool'
+  432 |       bool latch);
+      |       ^~~~
+../Core/Inc/PmodNAV.h:434:1: error: unknown type name 'u8'
+  434 | u8 NAV_GetIntSrcMAG(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:440:1: error: unknown type name 'u8'
+  440 | u8 NAV_TempAvailableALT(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:441:1: error: unknown type name 'u8'
+  441 | u8 NAV_DataAvailableALT(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:442:45: error: unknown type name 'u8'
+  442 | void NAV_ConfigIntALT(PmodNAV* InstancePtr, u8 bIntGen, u8 bActiveType,
+      |                                             ^~
+../Core/Inc/PmodNAV.h:442:57: error: unknown type name 'u8'
+  442 | void NAV_ConfigIntALT(PmodNAV* InstancePtr, u8 bIntGen, u8 bActiveType,
+      |                                                         ^~
+../Core/Inc/PmodNAV.h:443:7: error: unknown type name 'u8'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |       ^~
+../Core/Inc/PmodNAV.h:443:23: error: unknown type name 'u8'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |                       ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:443:41: note: in expansion of macro 'bool'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |                                         ^~~~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:443:57: note: in expansion of macro 'bool'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |                                                         ^~~~
+../Core/Inc/PmodNAV.h:443:69: error: unknown type name 'u8'
+  443 |       u8 bOutputType, u8 dataSignalVal, bool intEnable, bool latch, u8 intLevel);
+      |                                                                     ^~
+../Core/Inc/PmodNAV.h:445:1: error: unknown type name 'u8'
+  445 | u8 NAV_GetIntSrcALT(PmodNAV* InstancePtr);
+      | ^~
+../Core/Inc/PmodNAV.h:448:39: error: unknown type name 'u8'
+  448 | void NAV_SetODR(PmodNAV* InstancePtr, u8 bInstMode, u8 odrVal);
+      |                                       ^~
+../Core/Inc/PmodNAV.h:448:53: error: unknown type name 'u8'
+  448 | void NAV_SetODR(PmodNAV* InstancePtr, u8 bInstMode, u8 odrVal);
+      |                                                     ^~
+../Core/Inc/PmodNAV.h:449:1: error: unknown type name 'u8'
+  449 | u8 NAV_GetODRRaw(PmodNAV* InstancePtr, u8 bInstMode);
+      | ^~
+../Core/Inc/PmodNAV.h:449:40: error: unknown type name 'u8'
+  449 | u8 NAV_GetODRRaw(PmodNAV* InstancePtr, u8 bInstMode);
+      |                                        ^~
+../Core/Inc/PmodNAV.h:450:40: error: unknown type name 'u8'
+  450 | float NAV_GetODR(PmodNAV* InstancePtr, u8 bInstMode);
+      |                                        ^~
+../Core/Inc/PmodNAV.h:454:43: error: unknown type name 'u8'
+  454 | void NAV_FIFOEnable(PmodNAV* InstancePtr, u8 bInst, bool fEnable);
+      |                                           ^~
+../Core/Inc/PmodNAV.h:52:14: error: unknown type name 'u8'
+   52 | #define bool u8
+      |              ^~
+../Core/Inc/PmodNAV.h:454:53: note: in expansion of macro 'bool'
+  454 | void NAV_FIFOEnable(PmodNAV* InstancePtr, u8 bInst, bool fEnable);
+      |                                                     ^~~~
+../Core/Inc/PmodNAV.h:455:40: error: unknown type name 'u8'
+  455 | void NAV_SetFIFO(PmodNAV* InstancePtr, u8 bInst, u8 parFIFOMode,
+      |                                        ^~
+../Core/Inc/PmodNAV.h:455:50: error: unknown type name 'u8'
+  455 | void NAV_SetFIFO(PmodNAV* InstancePtr, u8 bInst, u8 parFIFOMode,
+      |                                                  ^~
+../Core/Inc/PmodNAV.h:456:7: error: unknown type name 'u8'
+  456 |       u8 FIFOThreshold);
+      |       ^~
+../Core/Inc/PmodNAV.h:457:1: error: unknown type name 'u8'
+  457 | u8 NAV_GetFIFOMode(PmodNAV* InstancePtr, u8 bInst);
+      | ^~
+../Core/Inc/PmodNAV.h:457:42: error: unknown type name 'u8'
+  457 | u8 NAV_GetFIFOMode(PmodNAV* InstancePtr, u8 bInst);
+      |                                          ^~
+../Core/Inc/PmodNAV.h:458:1: error: unknown type name 'u8'
+  458 | u8 NAV_GetFIFOThs(PmodNAV* InstancePtr, u8 bInst);
+      | ^~
+../Core/Inc/PmodNAV.h:458:41: error: unknown type name 'u8'
+  458 | u8 NAV_GetFIFOThs(PmodNAV* InstancePtr, u8 bInst);
+      |                                         ^~
+../Core/Inc/PmodNAV.h:459:1: error: unknown type name 'u8'
+  459 | u8 NAV_GetFIFOStatus(PmodNAV* InstancePtr, u8 bInst);
+      | ^~
+../Core/Inc/PmodNAV.h:459:44: error: unknown type name 'u8'
+  459 | u8 NAV_GetFIFOStatus(PmodNAV* InstancePtr, u8 bInst);
+      |                                            ^~
+../Core/Src/main.c: In function 'NavDemo_Initialize':
+../Core/Src/main.c:418:5: warning: implicit declaration of function 'xil_printf'; did you mean 'viprintf'? [-Wimplicit-function-declaration]
+  418 |     xil_printf("Pmod Nav Demo Initializing...\n\r");
+      |     ^~~~~~~~~~
+      |     viprintf
+../Core/Src/main.c:419:5: warning: implicit declaration of function 'NAV_begin' [-Wimplicit-function-declaration]
+  419 |     NAV_begin ( // intialize the PmodNAV driver device
+      |     ^~~~~~~~~
+../Core/Src/main.c:421:9: error: 'XPAR_PMODNAV_0_AXI_LITE_GPIO_BASEADDR' undeclared (first use in this function)
+  421 |         XPAR_PMODNAV_0_AXI_LITE_GPIO_BASEADDR,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:421:9: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:422:9: error: 'XPAR_PMODNAV_0_AXI_LITE_SPI_BASEADDR' undeclared (first use in this function)
+  422 |         XPAR_PMODNAV_0_AXI_LITE_SPI_BASEADDR
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:427:1: error: unknown type name 'oid'; did you mean 'void'?
+  427 | oid NavDemo_Run(void) {
+      | ^~~
+      | void
+../Core/Src/main.c:427:5: error: conflicting types for 'NavDemo_Run'; have 'int(void)'
+  427 | oid NavDemo_Run(void) {
+      |     ^~~~~~~~~~~
+../Core/Src/main.c:42:6: note: previous declaration of 'NavDemo_Run' with type 'void(void)'
+   42 | void NavDemo_Run(void);
+      |      ^~~~~~~~~~~
+../Core/Src/main.c: In function 'NavDemo_Run':
+../Core/Src/main.c:444:4: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  444 |    usleep(100000);
+      |    ^~~~~~
+../Core/Src/main.c:435:11: warning: unused variable 'str' [-Wunused-variable]
+  435 |     char *str;
+      |           ^~~
+../Core/Src/main.c:433:11: warning: unused variable 'compass' [-Wunused-variable]
+  433 |     char *compass[8] = {"North", "North-East", "East", "South-East", "South",
+      |           ^~~~~~~
+../Core/Src/main.c:431:10: warning: unused variable 'magXYd' [-Wunused-variable]
+  431 |          magXYd,
+      |          ^~~~~~
+../Core/Src/main.c:430:10: warning: unused variable 'dps' [-Wunused-variable]
+  430 |          dps,
+      |          ^~~
+../Core/Src/main.c:429:10: warning: unused variable 'tempF' [-Wunused-variable]
+  429 |          tempF,
+      |          ^~~~~
+../Core/Src/main.c:428:10: warning: variable 'Pref' set but not used [-Wunused-but-set-variable]
+  428 |    float Pref,
+      |          ^~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+11:49:28 Build Failed. 235 errors, 9 warnings. (took 1s.146ms)
+

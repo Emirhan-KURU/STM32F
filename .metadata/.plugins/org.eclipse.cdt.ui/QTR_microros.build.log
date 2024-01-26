@@ -1,0 +1,26 @@
+12:12:51 **** Incremental Build of configuration Debug for project QTR_microros ****
+make -j8 all 
+docker pull microros/micro_ros_static_library_builder:humble && docker run --rm -v /home/emirhan/STM32CubeIDE/workspace_1.13.1/QTR_microros:/project --env MICROROS_LIBRARY_FOLDER=micro_ros_stm32cubemx_utils/microros_static_library_ide microros/micro_ros_static_library_builder:humble
+humble: Pulling from microros/micro_ros_static_library_builder
+Digest: sha256:3c13fee7e7d6814ebc87c7ccd4c5d7592310b8adc86c5ff2a1f4de179776a0fb
+Status: Image is up to date for microros/micro_ros_static_library_builder:humble
+docker.io/microros/micro_ros_static_library_builder:humble
+dos2unix: converting file /project/micro_ros_stm32cubemx_utils/microros_static_library_ide/library_generation/library_generation.sh to Unix format...
+micro-ROS library found. Skipping...
+Delete micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros/ for rebuild.
+ 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros/include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "QTR_microros.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/emirhan/STM32CubeIDE/workspace_1.13.1/QTR_microros/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="QTR_microros.map" -Wl,--gc-sections -static -L../micro_ros_stm32cubemx_utils/microros_static_library_ide/libmicroros --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: QTR_microros.elf
+ 
+arm-none-eabi-size   QTR_microros.elf 
+arm-none-eabi-objdump -h -S  QTR_microros.elf  > "QTR_microros.list"
+   text	   data	    bss	    dec	    hex	filename
+  79692	    284	  58048	 138024	  21b28	QTR_microros.elf
+Finished building: default.size.stdout
+ 
+Finished building: QTR_microros.list
+ 
+
+12:12:55 Build Finished. 0 errors, 0 warnings. (took 3s.986ms)
+
